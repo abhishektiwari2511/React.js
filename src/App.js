@@ -1,29 +1,90 @@
 // import logo from './logo.svg';
-import './App.css';
-import React,{ useState } from 'react';
-
+import "./App.css";
+import React, { useState } from "react";
 
 function App() {
-  
-  const [statu,setStatus]=useState(false)
+  const [name, setName] = useState("");
+  const [tnc, setTnc] = useState(false);
+  const [interest, setInterest] = useState("");
 
- 
+  function getData(e) {
+    console.warn(name, tnc, interest);
+    e.preventDefault();
+  }
+  const abhi = (e) => {
+    setName(e.target.value);
+  };
+  const ram = function (e) {
+    setInterest(e.target.value);
+  };
+  function tiwari(e) {
+    setTnc(e.target.checked);
+  }
+  const clear = () => {
+    setName("");
+    setInterest("");
+    setTnc(false);
+  };
 
   return (
     <div className="App">
-        {
-          statu===true?<h1>hello word</h1>:null
-        }
-      
-        {/* <button onClick={()=>setStatus(false)}>hide</button>
-        <button onClick={()=>setStatus(true)}>show</button> */}
-        <button onClick={()=>setStatus(!statu)}>toggle</button>
+      <h1>heandle form in react</h1>
+      <form onSubmit={getData}>
+        <input
+          type="text"
+          placeholder="enter name"
+          value={name}
+          onChange={abhi}
+        />{" "}
+        <br />
+        <br />
+        <select onChange={ram} value={interest}>
+          <option>Select Option</option>
+          <option>marval</option>
+          <option>dc</option>
+        </select>
+        <br />
+        <br />
+        <input type="checkbox" value={tnc} onChange={tiwari} />
+        <span>Accept Terms and conditions</span>
+        <br />
+        <br />
+        <button type="submit">Submit</button> <s />
+        <button onClick={clear}>clear</button>
+      </form>
     </div>
   );
 }
 
-
-
 export default App;
 
+// function App() {
+//   const [name,setName]=useState("");
+//   const [tnc,setTnc]=useState(false);
+//   const [interest,setInterest]=useState("");
+//   function getFormData(e)
+//   {
+//     console.warn(name,tnc,interest)
+//     e.preventDefault()
+//   }
+//   return (
+//     <div className="App">
+//      <h1>Handle Form in React</h1>
+//      <form onSubmit={getFormData}>
+//        <input type="text" placeholder="enter name" value={name} onChange={(e)=>setName(e.target.value)} /> <br /><br />
+//        <select onChange={(e)=>setInterest(e.target.value)}>
+//          <option>Select Options</option>
+//          <option>Marvel</option>
+//          <option>DC</option>
+//        </select> <br /><br />
+//        <input type="checkbox"  onChange={(e)=>setTnc(e.target.checked)} /><span>Accept Terms and conditions</span>
+//        <br /><br />
+//        <button type="submit">Submit</button>
+//        <button>Clear</button>
 
+//      </form>
+//     </div>
+//   );
+// }
+
+// export default App;
