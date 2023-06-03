@@ -1,12 +1,17 @@
 // import logo from './logo.svg';
 import "./App.css";
-import Login from "./Login";
-
+import User from "./User";
 function App() {
+  function getData(){
+    return (
+    alert("you are excess user page help of props because i send a function as a props")
+    )
+  }
  return (
     <div className="App">
-     
-     <Login/>
+      
+     <User data={getData}/>
+    
     </div>
   );
 }
