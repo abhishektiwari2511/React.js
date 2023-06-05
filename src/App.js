@@ -1,32 +1,25 @@
 // import logo from './logo.svg';
 import "./App.css";
 import React from "react"
+import Student from "./Student";
 
 class App extends React.Component{
   constructor(){
     super()
     this.state={
-      count:0
+      show:true
     }
     console.log("constructor")
   
   }
-  shouldComponentUpdate(){
-    console.log('ShouldComponentUpdate',this.state.count)
-  
- if(this.state.count>5 && this.state.count<10 ){
-  return true
- }
- else{
-  return false
- }
-  }
+ 
   render(){
-    console.log("render",this.state.count)
+    console.log("render",this.state.show)
     return(
       <div>
-        <h1> Should Component Update {this.state.count} </h1>
-        <button onClick={()=>this.setState({count:this.state.count+1})}>click</button>
+        
+        {this.state.show===true?<Student/>:<h1>studen component is deleted</h1>}
+        <button onClick={()=>this.setState({show:!this.state.show})}>click</button>
      
       </div>
     )
