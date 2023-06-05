@@ -1,31 +1,19 @@
 // import logo from './logo.svg';
 import "./App.css";
-import React from "react"
-import Student from "./Student";
+import React,{useEffect,useState} from "react"
+ function App(){
+  const [count,setCount]=useState(0)
+  useEffect(()=>{
+    console.log("useEffect");
+  })
+  return(
+    <div className="App">
+      <h1>hello world {count}</h1>
+      <button onClick={()=>setCount(count+1)}>Click</button>
+    </div>
+  )
+ }
 
-class App extends React.Component{
-  constructor(){
-    super()
-    this.state={
-      show:true
-    }
-    console.log("constructor")
-  
-  }
- 
-  render(){
-    console.log("render",this.state.show)
-    return(
-      <div>
-        
-        {this.state.show===true?<Student/>:<h1>studen component is deleted</h1>}
-        <button onClick={()=>this.setState({show:!this.state.show})}>click</button>
-     
-      </div>
-    )
-  }
-
-}
 
 export default App;
 
