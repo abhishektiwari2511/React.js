@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+span{
+  font-size: 18px;
+  padding: 10px;
+  background: #ccc;
+  color: blue;
+  margin-bottom: 10px;
+    line-height: 60px
+}
