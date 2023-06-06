@@ -3,6 +3,7 @@ import "./App.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import User from "./User";
+// import {Fragment}  from "react"
 
 
 function App() {
@@ -40,11 +41,9 @@ function App() {
       
     },
   ];
- const ram = ()=>{
-  alert('hello')
-  // data.map((it)=>(
-    // alert(`hello ${it.name} from `+it.address.city)
-  // ))
+ const ram = (it)=>{
+  alert(`hello ${it.name} from `+ it.address.city)
+
  } 
  return (
     <div className="App">

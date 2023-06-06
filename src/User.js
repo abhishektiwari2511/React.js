@@ -1,15 +1,14 @@
 
 
 export default function User (props){
-    // const ram= ()=>{
-    // alert(`hello ${props.item.name} from `+props.item.address.city)
-    // }
+
+ const it=props.item
     return (
         <div>
-            <span>{props.item.name}</span>
+            <span>{it.name}</span>
             <span>{props.item.email}</span>
             <span>{props.item.contact}</span>
-            <button onClick={props.ram}>{props.item.name}</button>
+            <button onClick={()=>props.ram(it)}>{props.item.name}</button>
         </div>
     )
 }
