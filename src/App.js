@@ -2,59 +2,31 @@
 import "./App.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import User from "./User";
+import React from "react"
+
+
 // import {Fragment}  from "react"
 
 
-function App() {
+class App extends React.PureComponent {
+  constructor(){
+    super()
+    this.state={
+      count:0
+    }
+  }
   
-  const data = [
-    {
-      name: "abhishek",
-      email: "abhishek@gmail",
-      contact: 100,
-      address:{
-        city:"katni",
-        pincord:4288
-      }
-     
-    },
-    {
-      name: "abhi",
-      email: "abhi@gmail",
-      contact: 100,
-      address:{
-        city:"katni",
-        pincord:4288
-      }
-     
-    },
-    {
-      name: "ram",
-      email: "abhishek@gmail",
-      contact: 300,
-      address:{
-        city:"katni",
-        pincord:4288
-      }
-      
-      
-    },
-  ];
- const ram = (it)=>{
-  alert(`hello ${it.name} from `+ it.address.city)
-
- } 
- return (
-    <div className="App">
-      <h1>hello usser</h1>
-      {
-        data.map((item,i)=>(
-          <User item={item} ram={ram} key={i} />
-        ))
-      }
-     </div>
-    ) }
+  render(){
+     console.log("render is excequet")
+    return (
+       <div className="App">
+         <h1>your current count is {this.state.count}</h1>
+         <button onClick={()=>this.setState({count:1})}>Click me</button>
+        
+        </div>
+       ) 
+  }
+}
 
 export default App;
 
