@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 import "./App.css";
 import React,{useRef} from "react"
+import User from "./User"
 function App(){
     let ram= useRef(null);
     console.warn(ram)
@@ -8,14 +9,14 @@ function App(){
         console.log(ram.current.value)
         ram.current.focus()
         // ram.current.style.display='none'
-        ram.current.style.color='pink'
+        ram.current.style.color='white'
         ram.current.style.backgroundColor='grey'
 
     }
     return (
         <div className="App">
             <h1>hello world </h1>
-            <input type="text" ref={ram} />
+            <User ref={ram} />
             <button onClick={vishnu}>click me</button>
         </div>
     )
