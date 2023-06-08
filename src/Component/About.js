@@ -6,7 +6,9 @@ export default function About (){
         <div>
             <h1>hello from About</h1>
            
-            <Link to="/">go to Home</Link>
+            <Link to="/">go to Home</Link><br/>
+            <Link to="/user/abhi">Abhi</Link><br/>
+            <Link to ="/user/abhishek">Abhishek</Link>
             
         </div>
     )
