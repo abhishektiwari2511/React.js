@@ -9,6 +9,7 @@ return(
         <br/>
         <br/>
         <li><Link to="/Contect">Contect</Link></li>
+        <li><Link to="/Menu">Menu</Link></li>
     </ul>
     </div>
 )
