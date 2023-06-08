@@ -1,35 +1,30 @@
 // import logo from './logo.svg';
 import "./App.css";
-
-import "bootstrap/dist/css/bootstrap.min.css";
-import React,{useMemo,useState} from "react"
-
-
-// import {Fragment}  from "react"
-
-
-function App(){
-  const [count,setCount]=useState(0)
-  const [data,setData]=useState(10)
-  
-  const multicountMemo=useMemo(
-
-    function multicount(){
-      
-      console.log("rerandring")
-      return count*5
-    },[count])
-  return(
+import React, { useState } from "react";
+function App() {
+  return (
     <div className="App">
-      <h1>your count is {count}</h1>
-      <h1>your data is {data}</h1>
-      <h2>{multicountMemo}</h2>
-      <button onClick={()=>setCount(count+1)}>click for count</button>
-      <button onClick={()=> setData(data+1)}>click for data</button>
+       <h1>H.O.C</h1>
+      <HocRed ram={Component}/>
+      <HocBlue ram={Component}/>
+      <h1 style={{backgroundColor:'gray',color:'white',width:'100'}}><Component/></h1>
     </div>
-  )
+  );
 }
-
+function HocRed(props){
+  return  <h2 style={{backgroundColor:'red',width:'100'}}>red<props.ram /></h2>
+ }
+ function HocBlue (props){
+  return <h2 style={{backgroundColor:'blue',width:'100'}}>blue<props.ram /></h2>
+ }
+function Component(props) {
+  const [count, setCount] = useState(0);
+  return (
+    <div>
+      <h1>your count is {count}</h1>
+      <button onClick={() => setCount(count + 1)}>click</button>
+    </div>
+  );
+}
 export default App;
-
 
