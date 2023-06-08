@@ -1,17 +1,22 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-export default function Navebar (){
-return(
+export default function Navebar() {
+  return (
     <div>
-            <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <br/>
-        <br/>
-        <li><Link to="/Contect">Contect</Link></li>
-        <li><Link to="/Menu">Menu</Link></li>
-           
-    </ul>
+      <ul className="navbar" >
+        <li>
+          <NavLink className="nav-bar-link" style={({isActive})=>{return{color:isActive?'blue':''}}}  to="/">Home</NavLink>
+        </li>
+        <li>
+          <NavLink className="nav-bar-link"  to="/about">About</NavLink>
+        </li>
+        <li>
+          <NavLink className="nav-bar-link"  to="/Contect">Contect</NavLink>
+        </li>
+        <li>
+          <NavLink className="nav-bar-link"  to="/Menu">Menu</NavLink>
+        </li>
+      </ul>
     </div>
-)
+  );
 }

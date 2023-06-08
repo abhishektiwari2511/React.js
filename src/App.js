@@ -5,7 +5,6 @@ import About from "./Component/About";
 import Home from "./Component/Home";
 import Contect from "./Component/Contect";
 import Navebar from "./Component/Navebar";
-import Page404 from "./Component/Page404"
 import User from "./Component/User";
 
 function App() {
@@ -21,9 +20,9 @@ function App() {
           <Route path="/about" element={<About />} />
          
           <Route path="/Contect" element={<Contect/>}/>
-          {/* <Route path="/*" element={<h1>404page</h1>}/> */}
-          {/* <Route path="/*" element={<Page404/>}/> */}
-          <Route path='/user/:name' element={<User/>}/>
+          <Route path='/user/:name' element={<User/>} />
+          
+          
           <Route path="/*" element={<Navigate to="/"/>} />
 
         </Routes>
