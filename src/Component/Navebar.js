@@ -19,6 +19,9 @@ export default function Navebar() {
         <li>
           <NavLink className="nav-bar-link" to="/filter">Filter</NavLink>
         </li>
+        <li>
+          <NavLink className='nav-bar-link' to='/login'>Login</NavLink>
+        </li>
       </ul>
     </div>
   );
