@@ -16,6 +16,9 @@ export default function Navebar() {
         <li>
           <NavLink className="nav-bar-link"  to="/Menu">Menu</NavLink>
         </li>
+        <li>
+          <NavLink className="nav-bar-link" to="/filter">Filter</NavLink>
+        </li>
       </ul>
     </div>
   );
