@@ -25,22 +25,20 @@ console.log(data)
    <tr>
         <td>Id</td>
         <td>Name</td>
-        {/* <td>Link</td> */}
-        <td>Category</td>
-        <td>price</td>
-        <td>createdAt</td>
-        {/* <td>updateAt</td> */}
+      
+        <td>Email</td>
+        <td>Password</td>
+      
       </tr>
     {
       data.map((item,i)=>
       <tr key={i}>
         <td>{item._id}</td>
         <td>{item.name}</td>
-        {/* <td>{item.link}</td> */}
-        <td>{item.category}</td>
-        <td>{item.price}</td>
-        <td>{item.createdAt}</td>
-        {/* <td>{item.updateAt}</td> */}
+      
+        <td>{item.email}</td>
+        <td>{item.password}</td>
+  
       </tr>
       )}
       </tbody>
