@@ -1,9 +1,7 @@
-import {legacy_createStore}from "redux"
-
-const ram=()=>{
-    console.log(legacy_createStore)
-    return 1000
-}
-
-const Store=legacy_createStore(ram)
-export default Store 
+import {legacy_createStore} from "redux"
+import rootRadeucr from "../Reducer/RootRadeucr"
+// function ram (){
+//     console.warn('to store',legacy_createStore)
+// }
+ const store = legacy_createStore(rootRadeucr)
+ export default store

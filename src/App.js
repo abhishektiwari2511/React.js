@@ -1,20 +1,20 @@
 // import logo from './logo.svg';
 import "./App.css";
-import Home from "./containers/HomeContainer";
-import Header from "./containers/HeaderContainer";
-
-
-
+import addToCard from "./Redux/Action/Action";
+import { useDispatch } from "react-redux";
 function App() {
+  const dispatch = useDispatch()
+  const product={
+    name:'i-phone',
+    modle:'11 pro',
+    prise:10000000,
+    rating:'5star'
+  }
 
-
-
-
-  return (
+return (
     <div className="App">
-      <Header />
-     <Home />
-     
+      <h1>hello</h1>
+    <button onClick={()=>dispatch(addToCard(product))}>ADD TO CARD</button>
    </div>
   );
 }
