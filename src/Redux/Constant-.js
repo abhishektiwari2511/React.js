@@ -1,3 +1,5 @@
 export const ADD="ADD_TO_CARD"
 export const REMOVE="REMOVE_TO_CARD"
 export const EMPTY="EMPTY_CARD"
+export const PRODUCT_ACTION="PRODUCT_ACTION"
+export const PRODUCT_REDUCER="PRODUCT_REDUCER"

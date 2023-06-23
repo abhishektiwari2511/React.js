@@ -15,7 +15,7 @@ switch(action.type){
             console.warn('reducer is called for empt',action)
             return []
        default:
-          return []
+          return data
           
          }
 }

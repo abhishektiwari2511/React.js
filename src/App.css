@@ -134,3 +134,10 @@ span{
     color: white;
 }
 
+
+
+.product-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
